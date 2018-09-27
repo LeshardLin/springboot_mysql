@@ -1,0 +1,24 @@
+spring:
+  #配置逻辑视图前缀后缀
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  #设置数据库信息
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot_mysql?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  #配置JPA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#服务器设置
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
